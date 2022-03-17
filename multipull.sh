@@ -14,7 +14,6 @@ do
 			if [[ "$branch" == "develop" || "$branch" == "master" || "$branch" == "main" ]]; then
 				changes=`git diff --name-only`
 				if [ "$changes" == "" ]; then
-					echo "No uncommitted changes"
 					git pull
 					git fetch --tags
 				else
